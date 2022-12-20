@@ -3,10 +3,10 @@ from pyppeteer import launch
 
 
 async def search_for_prape_processes():
-    browser =  await launch({"headless": False, "args": ["--start-maximized"]})
+    browser =  await launch({"headless": True})
 
     page = await browser.newPage()
-    await page.setViewport({"width": 1600, "height": 900})
+    #await page.setViewport({"width": 1600, "height": 900})
 
     await page.goto("https://sipac.ufpb.br/public/jsp/processos/consulta_processo.jsf")
     
